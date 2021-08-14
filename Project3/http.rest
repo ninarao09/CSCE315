@@ -1,0 +1,18 @@
+GET http://localhost:5000/calorieTracker 
+Content-Type: application/json
+
+{
+    "title":"requested",
+    "id":30
+}
+
+###
+
+POST http://localhost:5000/calorieTracker 
+Content-Type: application/json
+
+{
+    "title":"requested",
+    "id1":10,
+    "id2":10
+}

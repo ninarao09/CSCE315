@@ -1,0 +1,94 @@
+
+body{
+    background-color: #636D97;
+    font-family: "verdana";
+    color: #ebebeb;
+    margin: 0px;
+
+    width:fit-content;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+u1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    overflow: hidden;
+    background-color: #050505;
+    width: 100%;
+
+
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: #ebebeb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #636D97;
+}
+
+li a.navbar{
+    background-color: #050505;
+}
+
+.user_recipe {
+  /*border: thick dotted red;*/
+      height: auto;
+      width: auto;
+      position: relative;
+}
+
+
+.recipeType {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+
+
+.container {
+  flex-wrap: wrap;
+}
+
+.containter h3{
+    text-align: center;
+}
+
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
+  height: 50%;
+
+}
+
+.card h1 {
+    color: black;
+}
+.card p {
+    color: black;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}

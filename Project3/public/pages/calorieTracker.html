@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Boot Strap Below -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href = "../style/calorieTracker.css" rel = "stylesheet">
+    <link href = "../style/style.css" rel = "stylesheet">
+    
+    
+        <title> Calorie Tracker </title>
+</head>
+
+<body>
+    <u1>
+        <li> <a class = "navbar" href = "landingPage.html"; > <div style = "font-family: verdana"> Landing Page </div> </a> </li>
+        <!--<li> <a class = "navbar" href = "individual.html"; > <div style = "font-family: verdana"> Home </div> </a> </li> !-->
+        <li> <a class = "navbar" href = "workoutsTracker.html"; > <div style = "font-family: verdana"> Workout Tracker </div> </a> </li>
+        <li> <a class = "navbar" href = "calorieTracker.html"; > <div style = "font-family: verdana"> Calorie Tracker </div> </a> </li>
+        <li> <a class = "navbar" href = "mealPlanner.html"; > <div style = "font-family: verdana"> Meal Planner </div> </a> </li>
+        <li> <a class = "navbar" href = "calendar.html"; > <div style = "font-family: verdana"> Calendar </div> </a> </li>
+        <li> <a class = "navbar" href = "recommendedRecipes.html"; > <div style = "font-family: verdana"> Recommended Recipes </div> </a> </li>
+    </u1>
+
+    <h1> Calorie Tracker </h1>
+    <div id = "container" class = "container">
+        <div class = "row">
+          <center>
+            <h6 class="center">
+                This calorie page tracks your macronutrients intake. Just type in the food name and the amount
+                servings then click add. We will find the certain nutrients values for you. You can click remove
+                which will be visible after you add a food item.
+            </h6>
+          </center>
+        </div>
+        <div class = "row">
+            <div class = "col">
+                <h2>Enter Meals and Foods</h2>
+                <div class = "container">
+                    <div class = "row">
+                        <br>
+                    </div>
+                    <div class = "row">
+                        <h4><label>Meal 1</label></h4>
+                    </div>
+                    <div id = "meal1" >
+                        <div id = "m1f1" class = "row">
+                            <label>Food 1 </label>
+                            <input type="text" id ="nameM1F1" class = "name" value = "" placeholder="Food Name">
+                            <input type="text" id ="servingsM1F1" class = "serving" value = "" placeholder="Servings">
+                            <input type="button" id ="addM1F1" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m1f2" class = "row">
+                            <label>Food 2 </label>
+                            <input type="text" id ="nameM1F2" class = "name" value = "" placeholder="Example: Pizza">
+                            <input type="text" id ="servingsM1F2" class = "serving" value =  "" placeholder = "2">
+                            <input type="button" id ="addM1F2" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m1f3" class = "row">
+                            <label>Food 3 </label>
+                            <input type="text" id ="nameM1F3" class = "name" value = "">
+                            <input type="text" id ="servingsM1F3" class = "serving" value =  "">
+                            <input type="button" id ="addM1F3" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m1f4" class = "row">
+                            <label>Food 4 </label>
+                            <input type="text" id ="nameM1F4" class = "name" value = "">
+                            <input type="text" id ="servingsM1F4" class = "serving" value =  "">
+                            <input type="button" id ="addM1F4" class = "add" value = "Add" >
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <h4><label>Meal 2</label></h4>
+                    </div>
+                    <div id = "meal2" >
+                        <div id = "m2f1" class = "row">
+                            <label>Food 1 </label>
+                            <input type="text" id ="nameM2F1" class = "name" value = "">
+                            <input type="text" id ="servingsM2F1" class = "serving" value = "">
+                            <input type="button" id ="addM2F1" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m2f2" class = "row">
+                            <label>Food 2 </label>
+                            <input type="text" id ="nameM2F2" class = "name" value = "">
+                            <input type="text" id ="servingsM2F2" class = "serving" value =  "">
+                            <input type="button" id ="addM2F2" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m2f3" class = "row">
+                            <label>Food 3 </label>
+                            <input type="text" id ="nameM2F3" class = "name" value = "">
+                            <input type="text" id ="servingsM2F3" class = "serving" value =  "">
+                            <input type="button" id ="addM1F3" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m2f4" class = "row">
+                            <label>Food 4 </label>
+                            <input type="text" id ="nameM2F4" class = "name" value = "">
+                            <input type="text" id ="servingsM2F4" class = "serving" value =  "">
+                            <input type="button" id ="addM2F4" class = "add" value = "Add" >
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <h4><label>Meal 3</label></h4>
+                    </div>
+                    <div id = "meal3" >
+                        <div id = "m3f1" class = "row">
+                            <label>Food 1 </label>
+                            <input type="text" id ="nameM3F1" class = "name" value = "">
+                            <input type="text" id ="servingsM3F1" class = "serving" value = "">
+                            <input type="button" id ="addM3F1" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m3f2" class = "row">
+                            <label>Food 2 </label>
+                            <input type="text" id ="nameM3F2" class = "name" value = "">
+                            <input type="text" id ="servingsM3F2" class = "serving" value =  "">
+                            <input type="button" id ="addM3F2" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m3f3" class = "row">
+                            <label>Food 3 </label>
+                            <input type="text" id ="nameM3F3" class = "name" value = "">
+                            <input type="text" id ="servingsM3F3" class = "serving" value =  "">
+                            <input type="button" id ="addM3F3" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m3f4" class = "row">
+                            <label>Food 4 </label>
+                            <input type="text" id ="nameM3F4" class = "name" value = "">
+                            <input type="text" id ="servingsM3F4" class = "serving" value =  "">
+                            <input type="button" id ="addM3F4" class = "add" value = "Add" >
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <h4><label>Meal 4</label></h4>
+                    </div>
+                    <div id = "meal4" >
+                        <div id = "m4f1" class = "row">
+                            <label>Food 1 </label>
+                            <input type="text" id ="nameM4F1" class = "name" value = "">
+                            <input type="text" id ="servingsM4F1" class = "serving" value = "">
+                            <input type="button" id ="addM4F1" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m4f2" class = "row">
+                            <label>Food 2 </label>
+                            <input type="text" id ="nameM4F2" class = "name" value = "">
+                            <input type="text" id ="servingsM4F2" class = "serving" value =  "">
+                            <input type="button" id ="addM4F2" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m4f3" class = "row">
+                            <label>Food 3 </label>
+                            <input type="text" id ="nameM4F3" class = "name" value = "">
+                            <input type="text" id ="servingsM4F3" class = "serving" value =  "">
+                            <input type="button" id ="addM4F3" class = "add" value = "Add" >
+                        </div>
+                        <div id = "m4f4" class = "row">
+                            <label>Food 4 </label>
+                            <input type="text" id ="nameM4F4" class = "name" value = "">
+                            <input type="text" id ="servingsM4F4" class = "serving" value =  "">
+                            <input type="button" id ="addM4F4" class = "add" value = "Add" >
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class = "col">
+                <div id = "row"> <h2>Macro Total</h2></div>
+                <div class = "macroWindow">
+                    <div class = "total" id = "labelTotal">
+                        <Label>Total Cals: 0 Protein: 0 Fats:0 Carbs: 0</Label>
+                     </div>
+                    <div class = "mealTotal1">
+                        <div id = "row"> <h4><label>Meal 1</label></h4></div>
+                        <div id = "row" class="fLabel" ><Label id = "labelm1f1">Food 1 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm1f2">Food 2 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm1f3">Food 3 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm1f4">Food 4 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                    </div>
+                    <div class = "mealTotal2">
+                        <div id = "row"> <h4><label>Meal 2</label></h4></div>
+                        <div id = "row" class="fLabel" ><Label id = "labelm2f1">Food 1 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm2f2">Food 2 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm2f3">Food 3 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm2f4">Food 4 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                    </div>
+                    <div class = "mealTotal2">
+                        <div id = "row"> <h4><label>Meal 3</label></h4></div>
+                        <div id = "row" class="fLabel" ><Label id = "labelm3f1">Food 1 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm3f2">Food 2 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm3f3">Food 3 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm3f4">Food 4 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                    </div>
+                    <div class = "mealTotal2">
+                        <div id = "row"> <h4><label>Meal 4</label></h4></div>
+                        <div id = "row" class="fLabel" ><Label id = "labelm4f1">Food 1 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm4f2">Food 2 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm4f3">Food 3 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                        <div id = "row" class="fLabel"> <Label  id = "labelm4f4">Food 4 Servings:0 Cals:0 Protein: 0 Fats: 0 Carbs:0 </Label></div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type = "text/javascript" src="../scripts/calorieTrackerFront.js"></script>
+    <!--<script type = "module" src="../scripts/calorieTrackerFront.js"></script>-->
+
+</body>

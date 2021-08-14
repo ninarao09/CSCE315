@@ -1,0 +1,19 @@
+{
+  "name": "herokutest",
+  "version": "1.0.0",
+  "description": "this is a test for heroku",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "keywords": []
+}

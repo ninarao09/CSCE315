@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href = "../css/style.css" rel = "stylesheet">
+    <title> Calendar </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+
+    <script>
+        window.isMbscDemo = true;
+    </script>
+
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+    <style>
+        .button1{
+          background-color: black; /* Green */
+          border: none;
+          color: #ebebeb;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px
+        }
+        .button1:hover {background-color: #636D97;}
+
+    </style>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+        background-color: #636D97;
+    }
+    u1 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: table;
+        overflow: hidden;
+        background-color: #050505;
+        width: 100%;
+    }
+    li {
+        float: left;
+    }
+
+    li a{
+        display: block;
+        color: #ebebeb;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover:not(.active) {
+        background-color: #636D97;
+    }
+
+    li a.navbar{
+        background-color: #050505;
+    }
+    h1 {
+      font-family: "verdana";
+      color: #ebebeb;
+      margin: 0;
+      padding: 0;
+    }
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%
+    }
+    p{
+      font-family: "verdana";
+      color: #ebebeb;
+    }
+
+    .collapsible {
+      background-color: black; /* Green */
+      border: none;
+      color: #ebebeb;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px
+    }
+
+    .active, .collapsible:hover {
+      background-color: #636D97;
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #636D97;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <u1>
+        <li> <a class = "navbar" href = "landingPage.html"; > <div style = "font-family: verdana"> Landing Page </div> </a> </li>
+        <li> <a class = "navbar" href = "workoutsTracker.html"; > <div style = "font-family: verdana"> Workout Tracker </div> </a> </li>
+        <li> <a class = "navbar" href = "calorieTracker.html"; > <div style = "font-family: verdana"> Calorie Tracker </div> </a> </li>
+        <li> <a class = "navbar" href = "mealPlanner.html"; > <div style = "font-family: verdana"> Meal Planner </div> </a> </li>
+        <li> <a class = "navbar" href = "calendar.html"; > <div style = "font-family: verdana"> Calendar </div> </a> </li>
+        <li> <a class = "navbar" href = "recommendedRecipes.html"; > <div style = "font-family: verdana"> Recommended Recipes </div> </a> </li>
+    </u1>
+<br>
+
+<center>
+<h1>Calendar</h1>
+</center>
+
+<div id="photo">
+<div mbsc-page class="demo-create-read-update-delete-CRUD">
+  <div style="height:100%">
+      <div id="demo-add-delete-event"></div>
+
+    <div id="demo-add-popup">
+        <div class="mbsc-form-group">
+            <label>
+                Title
+                <input mbsc-input id="event-title">
+            </label>
+            <label>
+                Description
+                <textarea mbsc-textarea id="event-desc"></textarea>
+            </label>
+        </div>
+        <div class="mbsc-form-group">
+            <label for="event-all-day">
+                All-day
+                <input mbsc-switch id="event-all-day" type="checkbox" />
+            </label>
+            <label for="start-input">
+                Starts
+                <input mbsc-input id="start-input" />
+            </label>
+            <label for="end-input">
+                Ends
+                <input mbsc-input id="end-input" />
+            </label>
+            <div id="event-date"></div>
+            <label>
+                Show as busy
+                <input id="event-status-busy" mbsc-segmented type="radio" name="event-status" value="busy">
+            </label>
+            <label>
+                Show as free
+                <input id="event-status-free" mbsc-segmented type="radio" name="event-status" value="free">
+            </label>
+            <div class="mbsc-button-group">
+                <button class="mbsc-button-block" id="event-delete" mbsc-button data-color="danger" data-variant="outline">Delete event</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<center>
+  <br><br>
+  <button class="button1" onclick="takeshot();">Take Screenshot</button>
+  <button class="button1" onclick="sendEmail();">Send Email</button>
+  <button class="collapsible">Click me to read the description!</button>
+    <div class="content">
+      <p>This calendar page will allow you to add events to any date on the calendar
+      to plan out different meals and workouts. To add an event double click on the day. When you are done planning, if you
+      press the "Take Screenshot" button a screenshot of the calendar will appear
+      at the bottom of the page. If you right click on it, you can save the image
+      and download it to your computer. If you press the "Send Email " button, it
+      will send you an email of all the events you have created with the name, description,
+      and time you input for them.</p>
+  </div>
+
+</center>
+
+
+<br><br><br>
+
+
+<div id="output"></div>
+
+<script>
+
+    mobiscroll.setOptions({
+        locale: mobiscroll.localeEn,       // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+        theme: 'ios',                      // Specify theme like: theme: 'ios' or omit setting to use default
+        themeVariant: 'light'              // More info about themeVariant: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-themeVariant
+    });
+
+    //array to contain email info
+    var event_title = new Array();
+    var description = new Array();
+    var start_time = new Array();
+    var end_time = new Array();
+    var event_id = new Array();
+    var all_day = new Array();
+
+    var oldEvent,
+        tempEvent = {},
+        deleteEvent,
+        restoreEvent,
+        titleInput = document.getElementById('event-title'),
+        descriptionTextarea = document.getElementById('event-desc'),
+        allDaySwitch = document.getElementById('event-all-day'),
+        freeSegmented = document.getElementById('event-status-free'),
+        busySegmented = document.getElementById('event-status-busy'),
+        deleteButton = document.getElementById('event-delete'),
+        datePickerResponsive = {
+            medium: {
+                controls: ['calendar'],
+                touchUi: false
+            }
+        },
+        datetimePickerResponsive = {
+            medium: {
+                controls: ['calendar', 'time'],
+                touchUi: false
+            }
+        },
+        //THIS is where I hardcde Calendar events
+
+        now = new Date(),
+
+        myData = [{
+            id: 1,
+            start: new Date(now.getFullYear(), now.getMonth()-5, 8, 13),
+            end: new Date(now.getFullYear(), now.getMonth()-5, 8, 13, 30),
+            title: 'Workout Calendar',
+            color: '#000'
+        }];
+
+
+    function createAddPopup(elm) {
+        // hide delete button inside add popup
+
+        deleteButton.style.display = 'none';
+
+        deleteEvent = true;
+        restoreEvent = false;
+
+        // set popup header text and buttons for adding
+        popup.setOptions({
+            headerText: 'New event',       // More info about headerText: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-headerText
+            buttons: ['cancel', {          // More info about buttons: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-buttons
+                text: 'Add',
+                keyCode: 'enter',
+                handler: function () {
+                    calendar.updateEvent({
+                        id: tempEvent.id,
+                        title: tempEvent.title,
+                        description: tempEvent.description,
+                        allDay: tempEvent.allDay,
+                        start: tempEvent.start,
+                        end: tempEvent.end,
+                        color: tempEvent.color,
+                    });
+                    //window.alert(tempEvent.title);
+
+                    event_id.push(tempEvent.id);
+                    event_title.push(tempEvent.title);
+                    description.push(tempEvent.description);
+                    start_time.push(tempEvent.start);
+                    end_time.push(tempEvent.end);
+                    all_day.push(tempEvent.allDay);
+
+                    //window.alert(tempEvent.allDay);
+
+                    // navigate the calendar to the correct view
+                    calendar.navigate(tempEvent.start);
+
+                    deleteEvent = false;
+                    popup.close();
+                },
+                cssClass: 'mbsc-popup-button-primary'
+            }]
+        });
+
+
+
+        // fill popup with a new event data
+        mobiscroll.getInst(titleInput).value = tempEvent.title;
+        mobiscroll.getInst(descriptionTextarea).value = '';
+        mobiscroll.getInst(allDaySwitch).checked = true;
+        range.setVal([tempEvent.start, tempEvent.end]);
+        mobiscroll.getInst(busySegmented).checked = true;
+        range.setOptions({ controls: ['date'], responsive: datePickerResponsive });
+
+        // set anchor for the popup
+        popup.setOptions({ anchor: elm });
+
+        popup.open();
+    }
+
+    function createEditPopup(args) {
+        var ev = args.event;
+
+        // show delete button inside edit popup
+        deleteButton.style.display = 'block';
+
+        deleteEvent = false;
+        restoreEvent = true;
+
+        var i;
+        var j;
+        for(i=0; i<event_title.length; ++i){
+          if(tempEvent.id == event_id[i]){
+            j=i;
+          }
+        }
+        // set popup header text and buttons for editing
+        popup.setOptions({
+            headerText: 'Edit event',      // More info about headerText: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-headerText
+            buttons: ['cancel', {          // More info about buttons: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-buttons
+                text: 'Save',
+                keyCode: 'enter',
+                handler: function () {
+                    var date = range.getVal();
+                    // update event with the new properties on save button click
+                    calendar.updateEvent({
+                        id: ev.id,
+                        title: titleInput.value,
+                        description: descriptionTextarea.value,
+                        allDay: mobiscroll.getInst(allDaySwitch).checked,
+                        start: date[0],
+                        end: date[1],
+                        free: mobiscroll.getInst(freeSegmented).checked,
+                        color: ev.color,
+                    });
+                    //update emails for updated save  here
+                    // how do we know which index to change
+                    event_title[j] = titleInput.value;
+                    description[j] = descriptionTextarea.value;
+                    start_time[j] = date[0];
+                    end_time[j] = date[1];
+                    event_id[j] = ev.id;
+                    all_day[j] = mobiscroll.getInst(allDaySwitch).checked;
+
+                    // navigate the calendar to the correct view
+                    calendar.navigate(date[0]);;
+
+                    restoreEvent = false;
+                    popup.close();
+                },
+                cssClass: 'mbsc-popup-button-primary'
+            }]
+        });
+
+        // fill popup with the selected event data
+        mobiscroll.getInst(titleInput).value = ev.title || '';
+        mobiscroll.getInst(descriptionTextarea).value = ev.description || '';
+        mobiscroll.getInst(allDaySwitch).checked = ev.allDay || false;
+        range.setVal([ev.start, ev.end]);
+
+        if (ev.free) {
+            mobiscroll.getInst(freeSegmented).checked = true;
+        } else {
+            mobiscroll.getInst(busySegmented).checked = true;
+        }
+
+        // change range settings based on the allDay
+        range.setOptions({
+            controls: ev.allDay ? ['date'] : ['datetime'],
+            responsive: ev.allDay ? datePickerResponsive : datetimePickerResponsive
+        });
+
+        // set anchor for the popup
+        popup.setOptions({ anchor: args.domEvent.currentTarget });
+        popup.open();
+    }
+
+    var calendar = mobiscroll.eventcalendar('#demo-add-delete-event', {
+        clickToCreate: 'double',           // More info about clickToCreate: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-clickToCreate
+        dragToCreate: true,                // More info about dragToCreate: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-dragToCreate
+        dragToMove: true,                  // More info about dragToMove: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-dragToMove
+        dragToResize: true,                // More info about dragToResize: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-dragToResize
+        view: {                            // More info about view: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-view
+            calendar: { labels: true }
+        },
+        data: myData,                      // More info about data: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-data
+        onEventClick: function (args) {    // More info about onEventClick: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#event-onEventClick
+            oldEvent = { ...args.event };
+            tempEvent = args.event;
+
+            if (!popup.isVisible()) {
+                createEditPopup(args);
+            }
+        },
+        onEventCreated: function (args) {  // More info about onEventCreated: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#event-onEventCreated
+            popup.close();
+            // store temporary event
+            tempEvent = args.event;
+            createAddPopup(args.target);
+        },
+        onEventDeleted: function () {      // More info about onEventDeleted: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#event-onEventDeleted
+            mobiscroll.snackbar({
+                button: {
+                    action: function () {
+                        calendar.addEvent(args.event);
+                    },
+                    text: 'Undo'
+                },
+                message: 'Event deleted'
+            });
+        }
+    });
+
+    var popup = mobiscroll.popup('#demo-add-popup', {
+        display: 'bottom',                 // Specify display mode like: display: 'bottom' or omit setting to use default
+        contentPadding: false,
+        fullScreen: true,
+        onClose: function () {             // More info about onClose: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#event-onClose
+            if (deleteEvent) {
+                calendar.removeEvent(tempEvent);
+            } else if (restoreEvent) {
+                calendar.updateEvent(oldEvent);
+            }
+        },
+        responsive: {                      // More info about responsive: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-responsive
+            medium: {
+                display: 'bubble',         // Specify display mode like: display: 'bottom' or omit setting to use default
+                width: 400,                // More info about width: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-width
+                fullScreen: false,
+                touchUi: false
+            }
+        }
+    });
+
+    titleInput.addEventListener('input', function (ev) {
+        // update current event's title
+        tempEvent.title = ev.target.value;
+    });
+
+    descriptionTextarea.addEventListener('change', function (ev) {
+        // update current event's title
+        tempEvent.description = ev.target.value;
+    });
+
+    allDaySwitch.addEventListener('change', function () {
+        var checked = this.checked
+        // change range settings based on the allDay
+        range.setOptions({
+            controls: checked ? ['date'] : ['datetime'],
+            responsive: checked ? datePickerResponsive : datetimePickerResponsive
+        });
+
+        // update current event's allDay property
+        tempEvent.allDay = checked;
+    });
+
+    var range = mobiscroll.datepicker('#event-date', {
+        controls: ['date'],
+        select: 'range',
+        startInput: '#start-input',
+        endInput: '#end-input',
+        showRangeLabels: false,
+        touchUi: true,
+        responsive: datePickerResponsive,  // More info about responsive: https://docs.mobiscroll.com/5-3-0/javascript/eventcalendar#opt-responsive
+        onChange: function (args) {
+            var date = args.value;
+            // update event's start date
+            tempEvent.start = date[0];
+            tempEvent.end = date[1];
+        }
+    });
+
+    document.querySelectorAll('input[name=event-status]').forEach(function (elm) {
+        elm.addEventListener('change', function () {
+            // update current event's free property
+            tempEvent.free = mobiscroll.getInst(freeSegmented).checked;
+        });
+    });
+
+    deleteButton.addEventListener('click', function () {
+        // delete current event on button click
+        calendar.removeEvent(oldEvent);
+        //window.alert(tempEvent.title)
+        //deal with deleting things in the array here
+
+
+        var i;
+        for(i=0; i<event_title.length; ++i){
+          if(tempEvent.id == event_id[i] ){
+            event_title.splice(i, 1);
+            start_time.splice(i, 1);
+            end_time.splice(i, 1);
+            description.splice(i, 1);
+            event_id.splice(i, 1);
+            all_day.splice(i, 1);
+          }
+        }
+
+
+        popup.close();
+
+        // save a local reference to the deleted event
+        var deletedEvent = tempEvent;
+
+        mobiscroll.snackbar({
+            button: {
+                action: function () {
+                    calendar.addEvent(deletedEvent);
+                },
+                text: 'Undo'
+            },
+            message: 'Event deleted'
+        });
+    });
+
+    //Use this function to test out things
+    /*
+    function testing(){
+      var i;
+      var emailBody2 = "Hi, your events include "
+      for(i=0; i<event_title.length; ++i){
+        emailBody2 =  emailBody2 + " " + event_title[i];
+      }
+      window.alert(emailBody2);
+    }
+    */
+    // here we Send the email
+    function sendEmail(){
+      var i;
+      var email = "abc@gmail.com";
+      var subject = "Your Diet-Pal Calendar";
+      var emailBody = "Hi, your events include, ";
+      for(i=0; i<event_title.length; ++i){
+
+        emailBody =  emailBody + "%0D%0A %0D%0A" + "Event: "+ event_title[i] + "%0D%0A" + "Start Time: " + start_time[i] +
+        "%0D%0A" + "End Time: " + end_time[i] + "%0D%0A" + "Description: " + description[i] + "%0D%0A %0D%0A";
+
+      }
+      window.location.assign("mailto:"+email+"?subject="+subject+"&body="+emailBody);
+    }
+
+</script>
+
+<script type="text/javascript">
+
+    // Define the function
+    // to screenshot the div
+    function takeshot() {
+        let div =
+            document.getElementById('photo');
+
+        // Use the html2canvas
+        // function to take a screenshot
+        // and append it
+        // to the output div
+        html2canvas(div).then(
+            function (canvas) {
+                document
+                .getElementById('output')
+                .appendChild(canvas);
+            })
+    }
+</script>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+    });
+    }
+</script>
+
+</body>
+</html>

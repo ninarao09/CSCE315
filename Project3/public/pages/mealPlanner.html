@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >Meal Planner</title>
+        <link href="../style/style.css" rel="stylesheet" type="text/css">
+
+
+        <link href = "../style/Mealplanstyles.css" rel = "stylesheet">
+        <script src = MealplannerRecipe.js defer></script>
+
+    </head>
+    <script>
+        const APP_ID = "ab0bacf8"
+        const KEY = "fcc640859cf13c9cd3c43cc175c81026"
+
+    </script>
+
+    <style>
+
+        h1{
+            text-align: center;
+            font-size: 30px;
+        }
+        p{
+            text-align: center;
+        }
+        div{
+           font-size: 20px;
+        }
+
+        .div1{
+          font-size: 16px;
+        }
+
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+            width: 80%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            grid-gap: 10px;
+            background-color: white;
+            padding: 10px;
+            max-width: 100%;
+            overflow-wrap: auto;
+
+        }
+        .grid-container > div {
+            background-color: #636D97;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .button{
+            border: white;
+            color:white;
+            background-color: #636D97;
+            border: 2px solid;
+            padding: 2% 2%;
+            text-align: center;
+            display: inline-block;
+            font-size: large;
+            margin: 0% 2%;
+            transition-duration: .4s;
+            cursor: pointer;
+        }
+        .text{
+            font-size: 16px;
+            margin: 2%;
+        }
+        .button:hover {
+            background-color: black;
+        }
+
+    </style>
+
+    <body>
+        <u1>
+         <li ><a class="navbar" href="landingPage.html"; ><div class="div1" style="font-family: verdana">Landing Page</div></a></li>
+         <li ><a class="navbar" href="workoutsTracker.html"; ><div class="div1" style="font-family: verdana">Workout Tracker</div></a></li>
+         <li><a class="navbar" href="calorieTracker.html"><div class="div1" style="font-family: verdana">Calorie Tracker</div></a></li>
+         <li><a class="navbar" href="mealPlanner.html"><div class="div1" style="font-family: verdana">Meal Planner</div></a></li>
+         <li><a class="navbar" href="calendar.html"><div class="div1" style="font-family: verdana">Calendar</div></a></li>
+         <li><a class="navbar" href="recommendedRecipes.html"><div class="div1" style="font-family: verdana">Recommended Recipes</div></a></li>
+        </u1>
+        <div id = "root">
+            <h1>Meal Planner</h1>
+            <center>
+            <div class="center">To fill out the meal planner simply type in a key word for a meal that you want and then press "Search". This will fill the appropriate box with the name and a link to the recipie of the meal you searched. It is important to remember that a healthy adult should consume around 2000 calories a day and should eat a nutrionaly balanced diet. To help achive your health goals please use the calorie tracker to search for the nutitional value of your meals.</div>
+            </center>
+            <br><br>
+
+            <div class="grid-container">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+
+                <div id = "b1">
+                    Breakfast
+                    <div>
+
+                    <form>
+                        <label> Enter a keyword for a recipe: </label>
+                        <input type = "text" id = 'user_searchb1'>
+                        <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb1').value = ''" value = "Search" >
+                    </form>
+                    </div>
+                    <div class = "user_recipe">
+                    </div>
+
+                </div>
+                <div id = "b2">Breakfast
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchb2'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb2').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "b3">Breakfast
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchb3'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb3').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "b4">Breakfast
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchb4'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb4').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "b5">Breakfast
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchb5'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb5').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "b6">Breakfast
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchb6'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb6').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "b7">Breakfast
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchb7'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchb1').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+
+<!---------------------------------------------------Lunch-------------------------------------------------->
+                <div id = "l1">
+                    Lunch
+                    <div>
+                    <form>
+                        <label> Enter a keyword for a recipe: </label>
+                        <input type = "text" id = 'user_searchl1'>
+                        <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl1').value = ''" value = "Search" >
+                    </form>
+                    </div>
+                    <div class = "user_recipe">
+                    </div>
+
+                </div>
+                <div id = "l2">Lunch
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchl2'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl2').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "l3">Lunch
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchl3'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl3').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "l4">Lunch
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchl4'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl4').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "l5">Lunch
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchl5'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl5').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "l6">Lunch
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchl6'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl6').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+                <div id = "l7">Lunch
+                    <div>
+                        <form>
+                            <label> Enter a keyword for a recipe: </label>
+                            <input type = "text" id = 'user_searchl7'>
+                            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchl1').value = ''" value = "Search" >
+                        </form>
+                        </div>
+                        <div class = "user_recipe">
+                        </div>
+                </div>
+
+<!---------------------------------------------------Dinner-------------------------------------------------->
+<div id = "d1">
+    Dinner
+    <div>
+    <form>
+        <label> Enter a keyword for a recipe: </label>
+        <input type = "text" id = 'user_searchd1'>
+        <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd1').value = ''" value = "Search" >
+    </form>
+    </div>
+    <div class = "user_recipe">
+    </div>
+
+</div>
+<div id = "d2">Dinner
+    <div>
+        <form>
+            <label> Enter a keyword for a recipe: </label>
+            <input type = "text" id = 'user_searchd2'>
+            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd2').value = ''" value = "Search" >
+        </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+</div>
+<div id = "d3">Dinner
+    <div>
+        <form>
+            <label> Enter a keyword for a recipe: </label>
+            <input type = "text" id = 'user_searchd3'>
+            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd3').value = ''" value = "Search" >
+        </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+</div>
+<div id = "d4">Dinner
+    <div>
+        <form>
+            <label> Enter a keyword for a recipe: </label>
+            <input type = "text" id = 'user_searchd4'>
+            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd4').value = ''" value = "Search" >
+        </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+</div>
+<div id = "d5">Dinner
+    <div>
+        <form>
+            <label> Enter a keyword for a recipe: </label>
+            <input type = "text" id = 'user_searchd5'>
+            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd5').value = ''" value = "Search" >
+        </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+</div>
+<div id = "d6">Dinner
+    <div>
+        <form>
+            <label> Enter a keyword for a recipe: </label>
+            <input type = "text" id = 'user_searchd6'>
+            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd6').value = ''" value = "Search" >
+        </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+</div>
+<div id = "d7">Dinner
+    <div>
+        <form>
+            <label> Enter a keyword for a recipe: </label>
+            <input type = "text" id = 'user_searchd7'>
+            <input type = "button" onclick = "getUserRecipe(); document.getElementById('user_searchd1').value = ''" value = "Search" >
+        </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+</div>
+
+            </div>
+
+            <!--<button class="button" type="button" onclick="alert('cannont add meals at this time')">Add Meal</button>
+            <button class="button" type="button" onclick="alert('cannont add meals at this time')">Remove/Edit Meal</button>*/-->
+        </div>
+    </body>
+
+
+</html>

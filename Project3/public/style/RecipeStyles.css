@@ -1,0 +1,140 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body{
+    background-color: #636D97;
+    font-family: "verdana";
+    color: #ebebeb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+u1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    overflow: hidden;
+    background-color: #050505;
+    width: 100%;
+
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: block;
+    color: #ebebeb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #636D97;
+}
+
+li a.navbar{
+    background-color: #050505;
+}
+
+.user_recipe {
+    /*border: thick dotted red;*/
+    height: 35%;
+    width: 28%;
+    position: absolute; left: 15%; top: 32%;
+}
+.user_recipe_title {
+    /*border: thick dotted blue;*/
+    height: 5%;
+    width: 28%;
+    position: absolute; left: 15%; top: 18%;
+}
+
+.quick_easy {
+    /*border: thick dotted red;*/
+    height: 35%;
+    width: 28%;
+    position: absolute; right: 15%; top: 29%;
+}
+.quick_easy_title {
+    /*border: thick dotted blue;*/
+    height: 5%;
+    width: 28%;
+    position: absolute; right: 15%; top: 18%;
+}
+
+.low_carb {
+    /*border: thick dotted red;*/
+    height: 40%;
+    width: 28%;
+    position: absolute; left: 15%; top: 83%;
+}
+.low_carb_title {
+    /*border: thick dotted blue;*/
+    height: 5%;
+    width: 28%;
+    position: absolute; left: 15%; top: 72%;
+}
+
+.high_protein {
+    /*border: thick dotted red;*/
+    height: 40%;
+    width: 28%;
+    position: absolute; right: 15%; top: 80%;
+}
+.high_protein_title {
+    /*border: thick dotted blue;*/
+    height: 5%;
+    width: 28%;
+    position: absolute; right: 15%; top: 69%;
+}
+
+.recipeType {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.recipeImg {
+    width: 20%;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  transition: all .2s linear;
+  height: 50%;
+}
+
+.card h1 {
+    color: black;
+}
+.card p {
+    color: black;
+}
+
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}

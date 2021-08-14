@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link href = "../style/RecipeStyles.css" rel = "stylesheet">
+    <script src = userRecipe.js defer></script>
+    <title> Recommended Recipes </title>
+</head>
+
+<script>
+    const APP_ID = "11fce68e"
+    const KEY = "6225686cdbf5eb856e4e6daa669e22ec"
+    const URL = `https://api.edamam.com/search?q=keto&app_id=${APP_ID}&app_key=${KEY}&from=0&to=1`
+</script>
+
+<body>
+    <u1>
+        <li> <a class = "navbar" href = "landingPage.html"; > <div style = "font-family: verdana"> Landing Page </div> </a> </li>
+        <li> <a class = "navbar" href = "workoutsTracker.html"; > <div style = "font-family: verdana"> Workout Tracker </div> </a> </li>
+        <li> <a class = "navbar" href = "calorieTracker.html"; > <div style = "font-family: verdana"> Calorie Tracker </div> </a> </li>
+        <li> <a class = "navbar" href = "mealPlanner.html"; > <div style = "font-family: verdana"> Meal Planner </div> </a> </li>
+        <li> <a class = "navbar" href = "calendar.html"; > <div style = "font-family: verdana"> Calendar </div> </a> </li>
+        <li> <a class = "navbar" href = "recommendedRecipes.html"; > <div style = "font-family: verdana"> Recommended Recipes </div> </a> </li>
+    </u1>
+
+    <div id = "root">
+        <h1> Recommended Recipes </h1>
+
+        <p> Welcome to the Recipe Recommendations page! Below you'll find a few recipe options to choose from. If you'd like something a little more personalized,
+            you can type a keyword entry (i.e. something like 'pork' or 'beef') into the search box, press search, and the Edamam API will show you a recipe just for you!
+        </p>
+
+        <div class = "user_recipe_title">
+            <h1 style="font-size: 1.5vw;"> For You </h1>
+            <form style = "position: absolute; left: 17%;">
+                <label> Enter a keyword for a recipe: </label>
+                <input type = "text" id = 'user_search'>
+                <input type = "button" onclick = "getUserRecipe();" value = "Search">
+                <input type = "button" onclick = "removeUserRecipe();" value = "Clear">
+            </form>
+        </div>
+        <div class = "user_recipe">
+        </div>
+
+        <div class = "quick_easy_title">
+            <h1 style="font-size: 1.5vw;"> Quick and Easy </h1>
+        </div>
+        <div class = "low_carb_title">
+            <h1 style="font-size: 1.5vw;"> Low Carb </h1>
+        </div>
+        <div class = "high_protein_title">
+            <h1 style="font-size: 1.5vw;"> High Protein </h1>
+        </div>
+
+        <script src="BaseRecipes.js"></script>
+    </div>
+</body>
