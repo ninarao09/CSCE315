@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .column{
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+        
+        .row{
+            margin: 0 10px;
+        }
+        
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 16px;
+          text-align: center;
+          background-color: #6f4a8e;
+        }
+        
+        .card:hover{
+            box-shadow: 0 8px 16px 0 #ebebeb;
+        }
+        
+        .cardcontainer{
+            display: block;
+            margin-left:  auto;
+            margin-right: auto;
+            width: 60%;
+            justify-content: center;
+
+        }
+        
+    </style>
+    
+    <body style="background-color: #221f3b ">        
+        <u1>
+         <li ><a class="navbar" href="index.html"; ><div style="font-family: verdana">Home</div></a></li>
+         <li><a class="navbar" href="about.html"><div style="font-family: verdana">About Me</div></a></li>
+         <li><a class="navbar" href="portfolio.html"><div style="font-family: verdana">Portfolio</div></a></li>
+         <li><a class="navbar" href="qualifications.html"><div style="font-family: verdana">Qualifications</div></a></li>
+         <li><a class="navbar" href="service.html"><div style="font-family: verdana">Service</div></a></li>
+         
+       
+        </u1>
+        
+        <br><br>
+        <h1 class="center" style="font-family: verdana; color:#ebebeb; font-size: 60px">Portfolio</h1>   
+        
+        <main>
+            
+            <h2 class="center" style="font-family: verdana; color:#ebebeb">Completed Projects</h2>   
+
+            <div class="cardcontainer">
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                      <h3>Aggie Alert</h3>
+                      <p>TAMU Saftey App</p>
+                      <button class="button"><a style="color:#ebebeb; text-decoration: none" href="https://devpost.com/software/aggie-alert?ref_content=user-portfolio&ref_feature=in_progress">Demo</a></button> 
+                      <button class="button"><a style="color:#ebebeb; text-decoration: none" href="https://github.com/LidSu3/TAMUhack">Code</a></button>
+                   </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <h3>Sterile Speak</h3>
+                  <p>Contact free voice command system</p>
+                  <button class="button"><a style="color:#ebebeb; text-decoration: none" href="sterilespeak.pdf">Report</a></button>
+                <button class="button"><a style="color:#ebebeb; text-decoration: none" href="cert.PNG">Cert</a></button>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <h3>Memory Allocator</h3>
+                  <p>Created a full fledged Fibonnaci Buddy System Allocator</p>
+                  <button class="button"><a style="color:#ebebeb; text-decoration: none" href="https://github.com/nninarao09/CSCE313/tree/master/MP1/MS3">Code</a></button>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <h3>Using the Data Server</h3>
+                  <p>Made multiple threads and practiced synchronization between them</p>
+                  <button class="button"><a style="color:#ebebeb; text-decoration: none" href="https://github.com/nninarao09/CSCE313/tree/master/MP3">Code</a></button>
+                </div>
+              </div>
+            </div>
+            </div>
+            <br><br>
+            <h2 class="center" style="font-family: verdana; color:#ebebeb">Future Projects</h2>   
+            
+            <h4 style="font-family: verdana; text-align: center; color:#ebebeb"><u>Spotify Song Finder</u></h4>
+            <p class="center" style="font-family: verdana; text-align: center; color:#ebebeb; font-size: 18px">
+            
+                <img class="center" src="spotify.png" alt="brain" style="width:300px;height:150;">
+                <br>
+                I want to create a website using a Spotify API that allows you to log on to your Spotify account  so that this website can then access the data from your account. From there, it will have a search bar that will allow you to type in the name of a song and then find all the different playlists that song is located in. Personally, I have always wanted a website that could do this but I haven&#39;t found one that exists, so I want to create it myself.
+            </p>
+            
+            <h4 style="font-family: verdana; text-align: center; color:#ebebeb"><u>Self Solving Rubik's Cube</u></h4>
+            <p class="center" style="font-family: verdana; text-align: center; color:#ebebeb; font-size: 18px">
+                
+                <img class="center" src="rubiks.png" alt="brain" style="width:250px;height:120;">
+                <br>
+                I want to create a self-solving Rubik&#39;s cube so that any time it is scrambled it will solve the cube using the correct method of solving a cube (CFOP) instead of reversing the steps that were taken to scramble.
+                 <br><br>
+            </p>
+           
+
+          
+        </main>
+
+        
+    </body>
+    
+    <div class="footer">
+        <br>
+        <a href="https://www.linkedin.com/in/nina-rao-993320191/"><img src="linkedin.png" alt="brain" style="width:70px;height:70px;"></a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/nninarao09"><img src="github.png" alt="brain" style="width:70px;height:70px;"></a>
+        &nbsp;&nbsp;
+        <a href="mailto: ninarao09@tamu.edu"><img src="email.png" alt="brain" style="width:70px;height:70px;"></a>
+        <p>STAY CONNECTED</p>
+    </div>
+    
+</html>
